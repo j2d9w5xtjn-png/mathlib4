@@ -8,6 +8,7 @@ module
 public import Mathlib.Algebra.Module.Pi
 public import Mathlib.Logic.Nontrivial.Basic
 public import Mathlib.Tactic.CrossRefAttribute
+public import Mathlib.Tactic.Attr.Core
 
 /-!
 # Matrices

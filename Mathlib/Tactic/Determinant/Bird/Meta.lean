@@ -6,8 +6,8 @@ Authors: Paul Cadman
 module
 
 public import Mathlib.LinearAlgebra.Matrix.Determinant.Bird
-public meta import Mathlib.Tactic.Ring
 public meta import Mathlib.Util.Qq
+public import Mathlib.Tactic.Ring
 
 /-!
 # Reification support for the determinant tactic
