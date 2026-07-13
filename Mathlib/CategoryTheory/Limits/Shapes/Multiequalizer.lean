@@ -862,7 +862,6 @@ def ofπ {J : MultispanShape.{w, w'}} (I : MultispanIndex J C)
 theorem condition (a) : I.fst a ≫ K.π (J.fst a) = I.snd a ≫ K.π (J.snd a) := by
   rw [← K.snd_app_right, ← K.fst_app_right]
 
-set_option backward.isDefEq.respectTransparency false in
 /-- This definition provides a convenient way to show that a multicofork is a colimit. -/
 @[simps]
 def IsColimit.mk (desc : ∀ E : Multicofork I, K.pt ⟶ E.pt)

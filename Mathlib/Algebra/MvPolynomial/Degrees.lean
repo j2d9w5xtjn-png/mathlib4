@@ -614,7 +614,6 @@ section degreesLE
 variable {s t : Multiset σ}
 
 variable (R σ s) in
-set_option backward.isDefEq.respectTransparency false in
 /-- The submodule of multivariate polynomials of degrees bounded by a monomial `s`. -/
 def degreesLE : Submodule R (MvPolynomial σ R) where
   carrier := {p | p.degrees ≤ s}
@@ -629,7 +628,6 @@ def degreesLE : Submodule R (MvPolynomial σ R) where
 @[simp] lemma mem_degreesLE : p ∈ degreesLE R σ s ↔ p.degrees ≤ s := Iff.rfl
 
 variable (s t) in
-set_option backward.isDefEq.respectTransparency false in
 lemma degreesLE_add : degreesLE R σ (s + t) = degreesLE R σ s * degreesLE R σ t := by
   classical
   rw [le_antisymm_iff, Submodule.mul_le]
@@ -644,7 +642,6 @@ lemma degreesLE_add : degreesLE R σ (s + t) = degreesLE R σ s * degreesLE R σ
   rw [show monomial i (x.coeff i) = monomial a (x.coeff i) * monomial b 1 by simp [this]]
   exact Submodule.mul_mem_mul ((degrees_monomial _ _).trans ha) ((degrees_monomial _ _).trans hb)
 
-set_option backward.isDefEq.respectTransparency false in
 @[simp] lemma degreesLE_zero : degreesLE R σ 0 = 1 := by
   refine le_antisymm (fun x hx ↦ ?_) (by simp)
   simp only [mem_degreesLE, nonpos_iff_eq_zero] at hx

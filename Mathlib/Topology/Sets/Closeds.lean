@@ -518,7 +518,6 @@ lemma map_strictMono_of_isInducing {f : β → α} (hf : IsInducing f) :
     StrictMono (map f hf.continuous) :=
   Monotone.strictMono_of_injective (map_mono hf.continuous) (map_injective_of_isInducing hf)
 
-set_option backward.isDefEq.respectTransparency false in
 /--
 Given `f : U → X` a continuous open embedding, the irreducible closeds of `U` are order isomorphic
 to the irreducible closeds of `X` nontrivially intersecting the range of `f`.

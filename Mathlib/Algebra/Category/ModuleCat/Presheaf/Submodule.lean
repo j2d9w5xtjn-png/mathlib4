@@ -59,7 +59,6 @@ lemma map_mem {X Y : Cᵒᵖ} (f : X ⟶ Y) {x : M.obj X} (hx : x ∈ N.obj X) :
   N.map f hx
 
 attribute [local simp] LinearMap.restrict_apply ModuleCat.semilinearMapAddEquiv in
-set_option backward.isDefEq.respectTransparency false in
 /-- The presheaf of modules associated to a submodule. -/
 @[simps! obj]
 noncomputable def toPresheafOfModules : PresheafOfModules.{v} R where

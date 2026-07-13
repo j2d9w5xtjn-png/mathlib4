@@ -515,7 +515,6 @@ private theorem Algebra.exists_etale_completeOrthogonalIdempotents_forall_liesOv
   · rw [← hP'φ] at heP'; simpa [he'0]
   · simpa
 
-set_option backward.isDefEq.respectTransparency false in
 /-- A less universe polymorphic version of
 `exists_etale_completeOrthogonalIdempotents_forall_liesOver_eq`. Use that instead. -/
 private lemma Algebra.exists_etale_completeOrthogonalIdempotents_forall_liesOver_eq'

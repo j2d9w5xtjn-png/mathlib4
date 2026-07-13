@@ -330,7 +330,6 @@ lemma finitePresentation_universalFactorizationMap :
   letI := (universalFactorizationMap R n m k hn).toAlgebra
   (universalFactorizationMapPresentation R n m k hn).finitePresentation_of_isFinite
 
-set_option backward.isDefEq.respectTransparency false in
 lemma finite_universalFactorizationMap :
     (universalFactorizationMap R n m k hn).Finite := by
   refine RingHom.IsIntegral.to_finite ?_
@@ -579,7 +578,6 @@ instance : Algebra.Etale R 𝓡' := by
       simp [Algebra.Presentation.dimension, hn]⟩
   infer_instance
 
-set_option backward.isDefEq.respectTransparency false in
 /-- The universal factorization ring represents
 `S ↦ "factorizations of p into coprime (monic deg m) * (monic deg k) in S"`. -/
 def UniversalCoprimeFactorizationRing.homEquiv :

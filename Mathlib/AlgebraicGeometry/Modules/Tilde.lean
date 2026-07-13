@@ -828,7 +828,6 @@ end QuasicoherentTilde
 
 open QuasicoherentTilde in
 set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in
 /-- If `M` is a quasi-coherent `𝒪_{Spec R}` module, it is isomorphic to `Γ(M)^~`. -/
 instance Scheme.Modules.isIso_fromTildeΓ_of_isQuasicoherent (M : (Spec R).Modules)
     [M.IsQuasicoherent] : IsIso M.fromTildeΓ := by

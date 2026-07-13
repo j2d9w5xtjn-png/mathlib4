@@ -25,7 +25,6 @@ namespace TopologicalSpace.Opens
 variable {X : TopCat.{u}} (U : Opens X) (R : X.Sheaf RingCat.{v})
 
 set_option backward.defeqAttrib.useBackward true in
-set_option backward.isDefEq.respectTransparency false in
 /-- Sheaves of modules over `R.over U` are equivalent to sheaves of modules over `R |_ U`. -/
 def sheafOfModulesEquivOver :
     SheafOfModules.{w} (R.over U) ≌ SheafOfModules.{w} (U.sheafRestrict.obj R) := by

@@ -94,7 +94,6 @@ def map {F G : J ⥤ C} (s : Cone F) {t : Cone G} (P : IsLimit t) (α : F ⟶ G)
   P.lift ((Cone.postcompose α).obj s)
 
 -- The `set_option` is needed to make reassoc generate the right theorem
-set_option backward.isDefEq.respectTransparency false in
 @[to_dual (attr := reassoc (attr := simp)) (reorder := c hd d) ι_map]
 theorem map_π {F G : J ⥤ C} (c : Cone F) {d : Cone G} (hd : IsLimit d) (α : F ⟶ G) (j : J) :
     hd.map c α ≫ d.π.app j = c.π.app j ≫ α.app j :=

@@ -157,7 +157,6 @@ variable {R R' R'' S : Type*} [CommRing R] [CommRing R'] [CommRing R''] [CommRin
   [Algebra R R'] [Algebra R R''] [Algebra R' R''] [IsScalarTower R R' R''] [Algebra R S]
 
 variable (R'') in
-set_option backward.isDefEq.respectTransparency false in
 attribute [local ext high] Ideal.Quotient.algHom_ext in
 /-- Let `e` be an element of `R' ⊗[R] S`. Then `R'' ⊗[R'] ((R' ⊗[R] S) / e)` is isomorphic to
 `(R'' ⊗[R] S) / e` as `R''`-algebras. -/

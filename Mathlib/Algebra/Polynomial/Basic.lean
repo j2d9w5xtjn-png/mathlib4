@@ -706,7 +706,6 @@ theorem ext_iff {p q : R[X]} : p = q ↔ ∀ n, coeff p n = coeff q n := by
 theorem ext {p q : R[X]} : (∀ n, coeff p n = coeff q n) → p = q :=
   ext_iff.2
 
-set_option backward.isDefEq.respectTransparency false in
 /-- Monomials generate the additive monoid of polynomials. -/
 theorem addSubmonoid_closure_setOf_eq_monomial :
     AddSubmonoid.closure { p : R[X] | ∃ n a, p = monomial n a } = ⊤ := by
